@@ -6,9 +6,17 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
         <link rel="stylesheet" href="{{asset('css/app.css')}}">
+        <!-- Scripts -->
+        <script src="{{ asset('js/app.js') }}"></script>
+        <!-- Fonts -->
+        <link rel="dns-prefetch" href="//fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
         <title>{{config('app.name', 'Hotelinking')}}</title>
     </head>
     <body>
-        @yield('content')
+        @include('inc.navbar')
+        <div class="container">
+            @yield('content')
+        </div>
     </body>
 </html>
