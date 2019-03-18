@@ -15,6 +15,7 @@
                     @endif
 
                     You are logged in!
+                    Aqui verás todos los cupones que tienes.
                 </div>
             </div>
         </div>

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\UserCoupon;
+use DB;
 
 class UserCouponsController extends Controller
 {
@@ -35,7 +36,21 @@ class UserCouponsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        /*$this->validate($request, [
+            'user_id' => 'required',
+            'coupon_id' => 'required'
+        ]);
+        */
+
+        // Create Post
+        $usercoupon = new UserCoupon();
+        $usercoupon->user_id = auth()->user()->id;
+        $usercoupon->coupon_id = '1';
+        $usercoupon->token = 'token_'.(rand(10,1000));
+
+        $usercoupon->save();
+
+        return redirect('/dashboard')->with('success', 'Ha recibido el cupón '.$request->input('title').' correctamente');
     }
 
     /**
