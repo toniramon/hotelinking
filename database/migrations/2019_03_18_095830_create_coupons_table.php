@@ -15,6 +15,9 @@ class CreateCouponsTable extends Migration
     {
         Schema::create('coupons', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('title');
+            $table->mediumText('description');
+            $table->string('coupon_img');
             $table->timestamps();
         });
     }
