@@ -12,3 +12,11 @@
 */
 
 Route::get('/', 'PagesController@index');
+
+Route::resource('usercoupons', 'UserCouponsController');
+
+Route::resource('coupons', 'CouponController');
+
+Auth::routes();
+
+Route::get('/dashboard', 'DashboardController@index');
