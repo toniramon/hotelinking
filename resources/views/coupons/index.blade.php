@@ -20,12 +20,9 @@
                         <div class="col">
                             {{Form::submit('Obtener Código', ['class' => 'btn btn-success'])}}
                         </div>
-                        </div>
+                    </div>
                 </div>
                 {!! Form::close() !!}
-
-
-
 
             </div>
 

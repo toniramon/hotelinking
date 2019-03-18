@@ -18,7 +18,6 @@
                                 <td><a href="/coupons/{{$coupon->id}}/edit" class="btn btn-light">Edit</a></td>
                                 <td>
 
-
                                     {!! Form::open(['action' => ['UserCouponsController@update', $coupon->id], 'method' => 'POST']) !!}
 
                                         {{Form::hidden('title', $coupon->title)}}
@@ -27,22 +26,6 @@
 
                                         {{Form::submit('Submit', ['class' => 'btn btn-primary'])}}
                                     {!! Form::close() !!}
-
-
-                                    {{--{!! Form::open(['action' => 'UserCouponsController@update', 'method' => 'POST']) !!}
-                                    {{Form::hidden('coupon_id', $coupon->id)}}
-                                    {{Form::hidden('title', $coupon->title)}}
-                                    <div class="container text-center small-spacing">
-                                        <div class="row">
-                                            <div class="col">
-                                                {{Form::submit('Obtener Código', ['class' => 'btn btn-success'])}}
-                                            </div>
-                                        </div>
-                                    </div>
-                                    {!! Form::close() !!}--}}
-
-
-
 
                                 </td>
                             </tr>
