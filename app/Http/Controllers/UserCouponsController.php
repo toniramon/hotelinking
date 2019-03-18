@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\UserCoupon;
+use App\GenerateCoupon;
 use DB;
 
 class UserCouponsController extends Controller
@@ -42,11 +43,11 @@ class UserCouponsController extends Controller
         ]);
         */
 
-        // Create Post
+        // Create UserCoupon
         $usercoupon = new UserCoupon();
         $usercoupon->user_id = auth()->user()->id;
-        $usercoupon->coupon_id = '1';
-        $usercoupon->token = 'token_'.(rand(10,1000));
+        $usercoupon->coupon_id = $request->coupon_id;
+        $usercoupon->token = GenerateCoupon::randomCoupon();
 
         $usercoupon->save();
 
