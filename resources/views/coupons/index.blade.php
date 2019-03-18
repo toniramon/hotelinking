@@ -6,7 +6,7 @@
         @foreach($coupons as $coupon)
 
             <div class="card card-body bg-light spacing">
-                <h3><a href="/posts/{{$coupon->id}}">{{$coupon->title}}</a></h3>
+                <h3><a href="/coupons/{{$coupon->id}}">{{$coupon->title}}</a></h3>
                 <img src="{{ URL::to('/') }}{{$coupon->coupon_img}}">
 
                 {!! Form::open(['action' => 'UserCouponsController@store', 'method' => 'POST']) !!}

@@ -85,7 +85,13 @@ class UserCouponsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        // Change coupon to checked.
+        $coupon = UserCoupon::find($id);
+        $coupon->used = 1;
+        $coupon->save();
+
+        return redirect('/dashboard')->with('success', 'El cupón '.$request->input('title').' ha sido canjeado correctamente.');
+
     }
 
     /**
