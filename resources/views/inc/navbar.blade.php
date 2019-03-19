@@ -13,7 +13,10 @@
              @guest
                 @else
                         <li class="nav-item">
-                            <a class="nav-link" href="/dashboard">Dashboard</a>
+                            <a class="nav-link" href="/coupons">Cupones</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/dashboard">Mi Panel</a>
                         </li>
             @endguest
             </ul>

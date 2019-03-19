@@ -27,8 +27,8 @@
         <div class="row">
             <div class="col">
                 <p class="lead text-center spacing">
-                    ¡Bienvenido <span>{{ Auth::user()->name }}</span>! Puedes acceder a tu
-                    <a class="btn btn-primary" href="/dashboard" role="button">Dashboard</a>
+                    ¡Bienvenido <span>{{ Auth::user()->name }}</span>! Puedes acceder a
+                    <a class="btn btn-primary" href="/dashboard" role="button">Mi Panel</a>
                 </p>
                 <p class="lead text-center spacing">
                     O también puedes acceder al listado de <a class="btn btn-success" href="/coupons" role="button">Cupones</a>
