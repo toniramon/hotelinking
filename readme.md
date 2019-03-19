@@ -7,3 +7,5 @@
 - ```Voilà```.
 
 Para más información puede consultar la demo funcionando -> [Demo](http://toniramon.dev/)
+
+![Landing APP](https://toniramon.dev/landing.png)
