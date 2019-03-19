@@ -3,6 +3,9 @@
 @section('content')
     <h1>Coupons</h1>
     @if(count($coupons) > 0)
+        <div class="small-spacing">
+            {{$coupons->links()}}
+        </div>
         @foreach($coupons as $coupon)
 
             <div class="card card-body bg-light spacing text-center">
@@ -10,7 +13,7 @@
                     <div class="col">
                         <h3><a href="/coupons/{{$coupon->id}}">{{$coupon->title}}</a></h3>
                         <a href="/coupons/{{$coupon->id}}" alt="coupon">
-                            <img src="{{ URL::to('/images') }}/{{$coupon->coupon_img}}">
+                            <img src="{{ URL::to('/images') }}/{{$coupon->coupon_img}}" class="coupon-img">
                         </a>
                     </div>
                     <div class="col spacing jumbotron">
@@ -33,7 +36,10 @@
             </div>
 
         @endforeach
-        {{$coupons->links()}}
+        <div class="small-spacing">
+            {{$coupons->links()}}
+        </div>
+
     @else
         <p>No posts found</p>
     @endif

@@ -51,7 +51,8 @@ class UserCouponsController extends Controller
 
         $usercoupon->save();
 
-        return redirect('/dashboard')->with('success', 'Ha recibido el cupón '.$request->input('title').' correctamente');
+        return redirect('/dashboard')->with('success', 'Ha recibido el cupón '.$request->input('title').'
+         con el código '.$usercoupon->token.' correctamente');
     }
 
     /**
